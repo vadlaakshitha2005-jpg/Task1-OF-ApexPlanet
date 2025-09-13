@@ -1,0 +1,191 @@
+<?php
+// PHP test at the top:
+echo "<p style='background:#0077cc;color:white;padding:10px;text-align:center'>
+Hello, PHP is working!</p>";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 Demo</title>
+  <style>
+    /* CSS inside the same file */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(45deg, #f0f4f8, #d9e2ec);
+    }
+
+    header {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    thead {
+      background-color: #0077cc;
+      color: #fff;
+    }
+    tfoot {
+      background-color: #eee;
+    }
+
+    /* Form Styles */
+    form input, form select, form textarea, form button {
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+    }
+
+    /* Flexbox Layout Example */
+    #multimedia article {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Grid Layout Example */
+    #forms article {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    /* Animations */
+    button {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    /* Media Query */
+    @media (min-width: 768px) {
+      #forms article {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #multimedia article {
+        flex-wrap: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Web Development Journey</h1>
+    <nav>
+      <ul>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#table">Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="forms">
+    <article>
+      <h2>Contact Form</h2>
+      <form>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br>
+        <label>Skills:</label>
+        <input type="checkbox" name="html"> HTML
+        <input type="checkbox" name="css"> CSS
+        <input type="checkbox" name="php"> PHP<br>
+        <label>Country:
+          <select>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+          </select>
+        </label><br>
+        <label>Message:<br>
+          <textarea rows="4" cols="30"></textarea>
+        </label><br>
+        <button type="submit">Submit</button>
+      </form>
+    </article>
+  </section>
+
+  <section id="multimedia">
+    <article>
+      <h2>Embedded Multimedia</h2>
+      <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <video controls width="320">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+              title="Sample video"></iframe>
+    </article>
+  </section>
+
+  <section id="table">
+    <article>
+      <h2>Sample Table</h2>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Skill</th><th>Level</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Akshitha</td><td>HTML</td><td>Intermediate</td></tr>
+          <tr><td>Akshitha</td><td>CSS</td><td>Beginner</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="3">End of List</td></tr>
+        </tfoot>
+      </table>
+    </article>
+  </section>
+
+  <footer>
+    <p>© 2025 My Learning Project</p>
+  </footer>
+</body>
+</html>
